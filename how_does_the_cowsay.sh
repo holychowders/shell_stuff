@@ -8,7 +8,7 @@ fi
 
 # Display help msg and exit if no arguments or --help is specified
 if [[ -z $@ || '--help' = $1 ]]; then
-  echo Pass in a string for every character in $cowsay_characters_dir to say
+  echo Help: Pass in a string for every character in $cowsay_characters_dir to say
   echo This program requires that cowsay be installed and the above directory exist
 
 else
