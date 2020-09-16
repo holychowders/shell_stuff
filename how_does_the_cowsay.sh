@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-say_this=$@
+cowsay_user_string=$@
 cowsay_characters_dir=/usr/share/cowsay/cows/
 
 if [ -d $cowsay_characters_dir ]; then
@@ -19,7 +19,7 @@ else
 
   for cow in $cows; do
     read contin
-    cowsay -f $cow $say_this
+    cowsay -f $cow $cowsay_user_string
     echo
   done 
 fi
