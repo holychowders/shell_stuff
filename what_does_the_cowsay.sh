@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
 cowsay_characters_dir=/usr/share/cowsay/cows/
-cows=$(ls $cowsay_characters_dir)
+
+if [ -d $cowsay_characters_dir ]; then
+  cows=$(ls $cowsay_characters_dir)
+else
+  echo Error: $cowsay_characters_dir not found. Is cowsay installed?
+  exit 1
+fi
 
 if [[ $1 = '--help' ]]; then
   echo Help: Scroll through all the characters in $cowsay_characters_dir
