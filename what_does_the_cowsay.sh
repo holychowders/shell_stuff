@@ -5,7 +5,7 @@ cowsay_characters_dir=/usr/share/cowsay/cows/
 if [ -d $cowsay_characters_dir ]; then
   cows=$(ls $cowsay_characters_dir)
 else
-  echo Error: $cowsay_characters_dir not found. Is cowsay installed?
+  echo Error: Characters not found in $cowsay_characters_dir. Is cowsay installed?
   exit 1
 fi
 
