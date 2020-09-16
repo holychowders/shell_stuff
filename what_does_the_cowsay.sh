@@ -9,13 +9,13 @@ else
   exit 1
 fi
 
+
 if [[ $1 = '--help' ]]; then
   echo Help: Scroll through all the characters in $cowsay_characters_dir
   echo This program requires that cowsay be installed and the above directory exist
 
 else
   echo Press Enter to go to next character
-
   for cow in $cows; do
     read proceed
     cowsay -f $cow $cow
